@@ -1,12 +1,10 @@
 import java.util.Scanner;
 import edu.misena.senaviewer.model.Book;
-import edu.misena.senaviewer.model.Chapter;
 import edu.misena.senaviewer.model.Magazine;
 import edu.misena.senaviewer.model.Movie;
 import edu.misena.senaviewer.model.Serie;
 import java.util.ArrayList;
 import java.util.List;
-import java.time.LocalDate;
 
 public class Main {
 
