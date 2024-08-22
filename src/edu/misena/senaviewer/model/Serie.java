@@ -1,5 +1,4 @@
 package edu.misena.senaviewer.model;
-import java.time.LocalDate;
 
 public class Serie {
         private int id;
@@ -11,14 +10,12 @@ public class Serie {
         private boolean viewed;
         private int timeViewed;
         private int sessionQuantity;
-        private LocalDate lastViewedDate; // Fecha de última visualización
 
         public Serie(String title, String genre, int duration) {
                 this.title = title;
                 this.genre = genre;
                 this.duration = duration;
                 this.viewed = false;
-                this.lastViewedDate = null;
         }
 
         public int getId() {
@@ -91,13 +88,5 @@ public class Serie {
 
         public void setSessionQuantity(int sessionQuantity) {
                 this.sessionQuantity = sessionQuantity;
-        }
-
-        public LocalDate getLastViewedDate() {
-                return lastViewedDate;
-        }
-
-        public void setLastViewedDate(LocalDate lastViewedDate) {
-                this.lastViewedDate = lastViewedDate;
         }
 }

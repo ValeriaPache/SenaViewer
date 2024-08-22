@@ -128,44 +128,6 @@ public class Main {
 
     private static void generateTodayReport() {
         System.out.println("\n--- Today's Report ---");
-
-        LocalDate today = LocalDate.now();
-        int totalMovieTime = 0;
-        int totalSerieTime = 0;
-        int totalBookTime = 0;
-        int totalMagazineTime = 0;
-
-        // Calcular el tiempo dedicado a cada tipo de contenido hoy
-        for (Movie movie : movies) {
-            if (movie.getLastViewedDate() != null && movie.getLastViewedDate().isEqual(today)) {
-                totalMovieTime += movie.getTimeViewed();
-            }
-        }
-
-        for (Serie serie : series) {
-            if (serie.getLastViewedDate() != null && serie.getLastViewedDate().isEqual(today)) {
-                totalSerieTime += serie.getTimeViewed();
-            }
-        }
-
-        for (Book book : books) {
-            if (book.getLastReadDate() != null && book.getLastReadDate().isEqual(today)) {
-                totalBookTime += book.getTimeReaded();
-            }
-        }
-
-        for (Magazine magazine : magazines) {
-            if (magazine.getLastReadDate() != null && magazine.getLastReadDate().isEqual(today)) {
-                totalMagazineTime += magazine.getLastReadDate().getDayOfMonth(); // Asumiendo tiempo leído es el día del mes
-            }
-        }
-
-        // Imprimir el reporte
-        System.out.println("Today's Report:");
-        System.out.println("Total time spent on Movies: " + totalMovieTime + " minutes");
-        System.out.println("Total time spent on Series: " + totalSerieTime + " minutes");
-        System.out.println("Total time spent on Books: " + totalBookTime + " minutes");
-        System.out.println("Total time spent on Magazines: " + totalMagazineTime + " minutes");
     }
 
     private static void initializeSampleData() {
