@@ -1,6 +1,5 @@
 package edu.misena.senaviewer.model;
-
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Chapter {
     private int id;
@@ -10,6 +9,7 @@ public class Chapter {
     private boolean viewed;
     private int timeViewed;
     private int sessionNumber;
+    private LocalDate lastReadDate; // Fecha de última lectura
 
     public Chapter(String title, int duration, int year) {
         this.title = title;
@@ -73,5 +73,13 @@ public class Chapter {
 
     public void setSessionNumber(int sessionNumber) {
         this.sessionNumber = sessionNumber;
+    }
+
+    public LocalDate getLastReadDate() {
+        return lastReadDate;
+    }
+
+    public void setLastReadDate(LocalDate lastReadDate) {
+        this.lastReadDate = lastReadDate;
     }
 }

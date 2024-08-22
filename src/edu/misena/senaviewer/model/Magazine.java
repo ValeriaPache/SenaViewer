@@ -1,18 +1,20 @@
 package edu.misena.senaviewer.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Magazine {
         private int id;
         private String title;
-        private Date editionDate;
+        private String editionDate;
         private String editorial;
         private String authors;
+        private LocalDate lastReadDate; // Fecha de última lectura
 
-        public Magazine(String title, Date editionDate, String editorial) {
+        public Magazine(String title, String editionDate, String editorial) {
                 this.title = title;
                 this.editionDate = editionDate;
                 this.editorial = editorial;
+                this.lastReadDate = null;
         }
 
         public int getId() {
@@ -31,11 +33,11 @@ public class Magazine {
                 this.title = title;
         }
 
-        public Date getEditionDate() {
+        public String getEditionDate() {
                 return editionDate;
         }
 
-        public void setEditionDate(Date editionDate) {
+        public void setEditionDate(String editionDate) {
                 this.editionDate = editionDate;
         }
 
@@ -53,5 +55,13 @@ public class Magazine {
 
         public void setAuthors(String authors) {
                 this.authors = authors;
+        }
+
+        public LocalDate getLastReadDate() {
+                return lastReadDate;
+        }
+
+        public void setLastReadDate(LocalDate lastReadDate) {
+                this.lastReadDate = lastReadDate;
         }
 }

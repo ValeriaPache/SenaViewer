@@ -1,4 +1,5 @@
 package edu.misena.senaviewer.model;
+import java.time.LocalDate;
 
 public class Movie {
         private int id;
@@ -9,6 +10,7 @@ public class Movie {
         private int year;
         private boolean viewed;
         private int timeViewed;
+        private LocalDate lastViewedDate; // Fecha de última visualización
 
         public Movie(String title, String genre, String creator, int duration, int year) {
                 this.title = title;
@@ -18,6 +20,7 @@ public class Movie {
                 this.year = year;
                 this.viewed = false;
                 this.timeViewed = 0;
+                this.lastViewedDate = null;
         }
 
         public int getId() {
@@ -68,7 +71,7 @@ public class Movie {
                 this.year = year;
         }
 
-        public boolean isViewed() {
+        public boolean getViewed() {
                 return viewed;
         }
 
@@ -82,5 +85,13 @@ public class Movie {
 
         public void setTimeViewed(int timeViewed) {
                 this.timeViewed = timeViewed;
+        }
+
+        public LocalDate getLastViewedDate() {
+                return lastViewedDate;
+        }
+
+        public void setLastViewedDate(LocalDate lastViewedDate) {
+                this.lastViewedDate = lastViewedDate;
         }
 }
