@@ -1,22 +1,27 @@
 package edu.misena.senaviewer.model;
 
-public class Serie {
+public class Serie extends Film{
         private int id;
-        private String title;
-        private String genre;
-        private String creator;
-        private int duration;
+        //private String title;
+        //private String genre;
+        //private String creator;
+        //private String duration;
         private int year;
         private boolean viewed;
         private int timeViewed;
         private int sessionQuantity;
 
-        public Serie(String title, String genre, int duration) {
+        public Serie(String title, String genre, String creator, String duration) {
+                super( title,genre,creator,duration);
+                this.viewed = false;
+        }
+
+        /*public Serie(String title, String genre, int duration) {
                 this.title = title;
                 this.genre = genre;
                 this.duration = duration;
                 this.viewed = false;
-        }
+        }*/
 
         public int getId() {
                 return id;
@@ -26,37 +31,37 @@ public class Serie {
                 this.id = id;
         }
 
-        public String getTitle() {
+        /*public String getTitle() {
                 return title;
         }
 
         public void setTitle(String title) {
                 this.title = title;
-        }
+        }*/
 
-        public String getGenre() {
+        /*public String getGenre() {
                 return genre;
         }
 
         public void setGenre(String genre) {
                 this.genre = genre;
-        }
+        }*/
 
-        public String getCreator() {
+        /*public String getCreator() {
                 return creator;
         }
 
         public void setCreator(String creator) {
                 this.creator = creator;
-        }
+        }*/
 
-        public int getDuration() {
+        /*public int getDuration() {
                 return duration;
         }
 
         public void setDuration(int duration) {
                 this.duration = duration;
-        }
+        }*/
 
         public int getYear() {
                 return year;
@@ -88,5 +93,10 @@ public class Serie {
 
         public void setSessionQuantity(int sessionQuantity) {
                 this.sessionQuantity = sessionQuantity;
+        }
+
+        @Override
+        public String toString(){
+                return super.toString() + ", Viewed: " + viewed ;
         }
 }

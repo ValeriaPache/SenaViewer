@@ -130,11 +130,11 @@ public class Main {
 
     private static void initializeSampleData() {
         // Agregar datos de ejemplo
-        movies.add(new Movie("Inception", "Sci-Fi", "Christopher Nolan", 148, 2010));
-        movies.add(new Movie("The Matrix", "Sci-Fi", "Wachowski Brothers", 136, 1999));
+        movies.add(new Movie("Inception", "Sci-Fi", "Christopher Nolan", "148", 2010));
+        movies.add(new Movie("The Matrix", "Sci-Fi", "Wachowski Brothers", "136", 1999));
 
-        series.add(new Serie("Breaking Bad", "Drama", 47));
-        series.add(new Serie("Game of Thrones", "Fantasy", 57));
+        series.add(new Serie("Breaking Bad", "Drama", "47", "2:00"));
+        series.add(new Serie("Game of Thrones", "Fantasy", "57","2:00"));
 
         books.add(new Book("The Hobbit", "1937-09-21", "George Allen & Unwin", "1234567890123"));
         books.add(new Book("1984", "1949-06-08", "Secker & Warburg", "9780451524935"));
