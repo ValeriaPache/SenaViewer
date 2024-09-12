@@ -13,8 +13,6 @@ public class Book extends Publication{
     public Book(String title, String edititionDate, String editorial, String isbn) {
         super( title, edititionDate, editorial);
         this.isbn =isbn;
-        this.readed = false;
-        this.timeReaded = 0;
     }
 
     /*public Book(String title, String edititionDate, String editorial, String isbn) {
@@ -92,6 +90,6 @@ public class Book extends Publication{
 
     @Override
     public String toString(){
-        return super.toString() + ", Isbn: " + isbn + ", Readed: " + readed + ", TimeReaded: " + timeReaded ;
+        return super.toString() + ", Isbn: " + isbn;
     }
 }

@@ -13,8 +13,6 @@ public class Movie extends Film{
         public Movie(String title, String genre, String creator, String duration, int year) {
                 super( title,genre,creator,duration);
                 this.year = year;
-                this.viewed = false;
-                this.timeViewed = 0;
         }
 
         /*public Movie(String title, String genre, String creator, int duration, int year) {
@@ -93,6 +91,6 @@ public class Movie extends Film{
 
         @Override
         public String toString(){
-                return super.toString() + ", Year: " + year + ", Viewed: " + viewed + ", TimeViewed: " + timeViewed ;
+                return super.toString() + ", Year: " + year;
         }
 }
