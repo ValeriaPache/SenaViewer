@@ -8,6 +8,7 @@ import java.util.List;
 
 public class Main {
 
+    // crear un array list en java
     private static List<Movie> movies = new ArrayList<>();
     private static List<Serie> series = new ArrayList<>();
     private static List<Book> books = new ArrayList<>();
@@ -129,7 +130,7 @@ public class Main {
     }
 
     private static void initializeSampleData() {
-        // Agregar datos de ejemplo
+        // Agregar datos de ejemplo al arrayList en java
         movies.add(new Movie("Inception", "Sci-Fi", "Christopher Nolan", "148", 2010));
         movies.add(new Movie("The Matrix", "Sci-Fi", "Wachowski Brothers", "136", 1999));
 
